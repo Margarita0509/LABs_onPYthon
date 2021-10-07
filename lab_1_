@@ -1,0 +1,17 @@
+import numpy as np
+import pandas as pd
+import matplotlib.pyplot as plt
+
+
+from array import *
+
+f = open('text.txt')
+
+x = []
+y = []
+for line in f:
+  str = line
+  x.append( float(str[1:str.find(',')]) )
+  y.append( float(str[str.find(' '):str.find(')') ]) )
+
+plt.scatter(x, y)
